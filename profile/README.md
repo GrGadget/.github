@@ -1,49 +1,25 @@
 # GrGadget
 
-## LATfield2
+Welcome to GrGadget superproject!
 
-Requirements:
-- meson
-- C++17 compiler 
-- MPI library
-- FFTW3
-- HDF5
-- GSL
-- Boost
+# Dependencies
 
-Instructions:
+- C++17 compiler
+- MPI
+- FFTW3 with parallel support
+- boost
+- hdf5 with parallel support
+- gsl
+- healpix
+- hwloc (optional)
+
+# Get started
+
 ```
-mkdir $BUILD_DIR
-cd $BUILD_DIR
-module load latfield/base
-meson $SRC_DIR --prefix $INSTALL_DIR
+git clone https://github.com/GrGadget/GrGadget-main.git
+mkdir build && cd build
+module load $dependencies
+cp ../GrGadget-main/examples/Config.sh .
+meson ../GrGadget-main
 ninja
-ninja install
 ```
-
-## gevolution-1.2
-
-Requirements:
-- meson
-- C++17 compiler 
-- MPI library
-- FFTW3
-- HDF5
-- GSL
-- Boost
-- LATfield2
-
-## Gadget4
-
-Requirements:
-- meson
-- C++17 compiler 
-- MPI library
-- FFTW3
-- HDF5
-- GSL
-- Boost
-- LATfield2
-- gevolution-1.2
-- HWLOC
-- Chealpix
